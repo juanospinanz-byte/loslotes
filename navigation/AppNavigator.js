@@ -15,7 +15,7 @@ const TabNavigator = () =>{
     return(
         <Tab.Navigator initialRouteName='Home'
         screenOptions ={({route})}=>({
-            tabBarIcon: ({color, size, focused}) =>{
+            tabBarIcon: ({color, size, focused}) => {
                 let iconName;
                 if (route.name === "Home"){
                     iconName = focused ? 'home' : 'home-outline';
@@ -29,7 +29,7 @@ const TabNavigator = () =>{
     )
 }
 
-const AuthNavigator = () =>{
+const AuthNavigator = () => {
     reutrn (
         <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name='Splash' component={SplashScreen} />

@@ -14,7 +14,7 @@ const TabNavigator = () =>{
     const {user} = useAuth();
     return(
         <Tab.Navigator initialRouteName='Home'
-        screenOptions ={(({route}))}=>({
+        screenOptions ={({route})}=>({
             tabBarIcon: ({color, size, focused}) =>{
                 let iconName;
                 if (route.name === "Home"){

@@ -12,25 +12,25 @@ const ProfileStack = createNativeStackNavigator();
 
 const TabNavigator = () =>{
     const {user} = useAuth();
-    return(
+    return (
         <Tab.Navigator initialRouteName='Home'
-        screenOptions ={(({route}))}=>({
-            tabBarIcon: ({color, size, focused}) =>{
-                let IconName;
-                if (route.name === "Home"){
-                    iconName = focused ? 'home' : 'home-outline';
-                }else if(route.name === "settings"){
-                    IconName = focused ? 'settings' : 'settings-outline';
-                }else if(route.name === "User"){
-                    IconName = focused ? 'person' : 'person-outline';
+        screenOptions ={({route})}=>({
+            tabBarIcon: ({color, size,focused}) => {
+                let iconName;
+                if (route.name === "Home") {
+                        iconName = focused ? 'home' : 'home-outline';
+                }else if(route.name === "Settings") {
+                        iconName = focused ? 'settings' : 'settings-outline';
+                }else if(route.name === "User") {
+                        iconName = focused ? 'person' : 'person-outline';
                 }
         })>
         </Tab.Navigator>
     )
 }
 
-const AuthNavigator = () =>{
-    reutrn (
+const AuthNavigator = () => {
+    return (
         <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name='Splash' component={SplashScreen} />
             <Stack.Screen name='Register' component={RegisterScreen} />

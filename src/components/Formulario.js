@@ -5,5 +5,5 @@ export default function Formulario() {
             <Text>Este es el Formulario</Text>
 
         </View>
-    )
+    );
 }
